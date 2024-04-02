@@ -5,62 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One Byte Foods</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link
-        href="https://fonts.goggleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:wght@400;500;600&display=swap"
-        rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <?php require ('all/links.php'); ?>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <!-- 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" /> -->
     <style>
-        * {
-            font-family: 'Poppins', sans-serif;
-
-        }
-
-        .h-font {
-            font-family: 'Merinda', cursive;
-
-        }
-
-        /* Chrome, Safari, Edge, Opera */
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-
-        /* Firefox */
-        input[type=number] {
-            -moz-appearance: textfield;
-        }
-
-        .swiper-slide img {
-            max-width: 82%;
-            /* Adjust the percentage as needed */
-            margin: 0 auto;
-            /* Center the image horizontally */
-            max-height: 630px;
-            padding-top: 15px;
-            /* padding-bottom: 15px; */
-        }
-
-        .custom-bg {
-            background-color: #2ec1ac;
-        }
-
-        .custom-bg:hover {
-            background-color: #279e8c;
-        }
-
         .availability-form {
-            margin-top: -180px;
+            margin-top: -140px;
+            margin-bottom: -100px;
             z-index: 11;
             position: relative;
 
@@ -79,188 +32,8 @@
 </head>
 
 <body class="bg-light">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">One Byte Foods</a>
-            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active me-2" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-2" href="#">Tables</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-2" href="#">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-2" href="#">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-2" href="#">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li> -->
-                    <!-- <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li> -->
-                </ul>
-                <div class="d-flex">
-                    <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-                    <!-- <button class="btn btn-outline-success " type="submit">Search</button> -->
-                    <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2" data-bs-toggle="modal"
-                        data-bs-target="#loginModal">
-                        Log In
-                    </button>
-                    <button type="button" class="btn btn-outline-dark shadow-none" data-bs-toggle="modal"
-                        data-bs-target="#signupModal">
-                        Sign Up
-                    </button>
 
-                </div>
-            </div>
-        </div>
-    </nav>
-
-
-
-    <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <form>
-                    <div class="modal-header">
-                        <h5 class="modal-title d-flex align-items-center">
-                            <i class="bi bi-person-circle fs-3 me-2"></i> User Login
-                        </h5>
-                        <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label class="form-label">Email address</label>
-                            <input type="email" class="form-control shadow-none">
-                            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
-                        </div>
-                        <div class="mb-5">
-                            <label class="form-label">Password</label>
-                            <input type="password" class="form-control shadow-none">
-                            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-2">
-                            <button type="submit" class="btn btn-dark shadow-none">
-                                LOGIN
-                            </button>
-                            <a href="javascript: void(0)" class="text-secondary text-decoration-none">Forgot
-                                Password?</a>
-                        </div>
-
-
-                    </div>
-                </form>
-                <!-- </div> -->
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="modal fade" id="signupModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <form>
-                    <div class="modal-header">
-                        <h5 class="modal-title d-flex align-items-center">
-                            <i class="bi bi-person-lines-fill fs-3 me-2"></i>
-                            User Signup
-                        </h5>
-                        <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
-                            Note: Your details must match with your ID (password, etc.)
-                        </span>
-                        <div class="container-fluid px-lg-4 mt-4">
-                            <div class="row">
-                                <div class="col-md-6 ps-0 mb-3">
-                                    <label class="form-label">Name</label>
-                                    <input type="text" class="form-control shadow-none">
-
-                                </div>
-                                <div class="col-md-6 p-0 mb-3">
-                                    <label class="form-label">Email</label>
-                                    <input type="email" class="form-control shadow-none">
-
-                                </div>
-                                <div class="col-md-6 ps-0 mb-3">
-                                    <label class="form-label">Phone Number</label>
-                                    <input type="number" class="form-control shadow-none">
-
-                                </div>
-                                <div class="col-md-6 p-0 mb-3">
-                                    <label class="form-label">Picture</label>
-                                    <input type="file" class="form-control shadow-none">
-
-                                </div>
-                                <div class="col-md-12 p-0 mb-3">
-                                    <label class="form-label">Address</label>
-
-                                    <textarea class="form-control shadow-none" rows="1"></textarea>
-                                </div>
-
-                                <div class="col-md-12 p-0 mb-3">
-                                    <label class="form-label">Date of Birth</label>
-                                    <input type="date" class="form-control shadow-none">
-
-                                </div>
-                                <div class="col-md-6 ps-0 mb-3">
-                                    <label class="form-label">Password</label>
-                                    <input type="password" class="form-control shadow-none">
-
-                                </div>
-                                <div class="col-md-6 ps-0 mb-3">
-                                    <label class="form-label">Confirm Password</label>
-                                    <input type="password" class="form-control shadow-none">
-
-                                </div>
-
-
-                            </div>
-                        </div>
-                        <div class="text-center my-1">
-                            <button type="submit" class="btn btn-dark shadow-none">
-                                SIGN UP
-                            </button>
-                            <!-- </div> -->
-                        </div>
-                    </div>
-                </form>
-
-            </div>
-        </div>
-    </div>
+    <?php require ('all/header.php'); ?>
 
     <div class="container-fluid">
         <!-- Swiper -->
@@ -275,9 +48,9 @@
                 <div class="swiper-slide">
                     <img src="restaurant_images/3.jpg" class="w-100 d-block" />
                 </div>
-                <!-- <div class="swiper-slide">
+                <div class="swiper-slide">
                     <img src="restaurant_images/4.jpg" class="w-100 d-block" />
-                </div> -->
+                </div>
                 <div class="swiper-slide">
                     <img src="restaurant_images/5.jpg" class="w-100 d-block" />
                 </div>
@@ -340,21 +113,132 @@
     <br><br><br>
 
     <!-- Tables -->
-    <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Our Tables</h2>
-    <div class="container">
+    <h2 class="mt-5 pt-4 mb-5 text-center fw-bold h-font">OUR TABLES</h2>
+    <div class="container ">
         <div class="row">
             <div class="col-lg-4 col-md-6 my-3">
+
                 <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
                     <img src="restaurant_images/1.jpg" class="card-img-top">
+
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5>Simple Table Name</h5>
+                        <div class="guests mb-4">
+                            <h6 class=mb-1>
+                                Guests
+                            </h6>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                2 - 4 
+                            </span>
+                        </div>
+                        <div class="rating mb-4">
+                            <h6 class="mb-1">Rating</h6>
+                            <span class="badge rounded-pill bg-light">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </span>
+
+
+                        </div>
+                        <div class="d-flex justify-content-evenly mb-2">
+                            <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
+                            <a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">More
+                                Details</a>
+                        </div>
+
+
                     </div>
                 </div>
 
             </div>
+
+            <div class="col-lg-4 col-md-6 my-3">
+
+                <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
+                    <img src="restaurant_images/8.jpg" class="card-img-top">
+
+                    <div class="card-body">
+                        <h5>Simple Table Name</h5>
+                        <div class="features mb-4">
+                            <h6 class=mb-1>
+                                Seats
+                            </h6>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                3-5 guests
+                            </span>
+
+                        </div>
+                        <div class="rating mb-4">
+                            <h6 class="mb-1">Rating</h6>
+                            <span class="badge rounded-pill bg-light">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </span>
+
+
+                        </div>
+                        <div class="d-flex justify-content-evenly mb-2">
+                            <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
+                            <a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">More
+                                Details</a>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6 my-3">
+
+                <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
+                    <img src="restaurant_images/3.jpg" class="card-img-top">
+
+                    <div class="card-body">
+                        <h5>Simple Table Name</h5>
+                        <div class="features mb-4">
+                            <h6 class=mb-1>
+                                Seats
+                            </h6>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                3-5 guests
+                            </span>
+
+                        </div>
+                        <div class="rating mb-4">
+                            <h6 class="mb-1">Rating</h6>
+                            <span class="badge rounded-pill bg-light">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </span>
+
+
+                        </div>
+                        <div class="d-flex justify-content-evenly mb-2">
+                            <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
+                            <a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">More
+                                Details</a>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
             <div class="col-lg-l2 text-center mt-5">
                 <a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">More Tables>>></a>
 
@@ -362,11 +246,137 @@
         </div>
     </div>
 
+    <!-- TESTIMONIALS -->
+    <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">TESTIMONIALS</h2>
+
+    <div class="container mt-5">
+        <div class="swiper swiper-testimonials">
+            <div class="swiper-wrapper mb-5">
+
+                <div class="swiper-slide bg-white p-4">
+                    <div class="profile d-flex align-items-center">
+                        <!-- <img src="restaurant_images/1.jpg" width="30px"> -->
+                        <h6 class="m-0 mb-3">Random User1</h6>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Mollitia veniam natus odio dolore temporibus. Officia consectetur expedita laboriosam quaerat
+                        neque.
+                    </p>
+                    <div class="rating">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide bg-white p-4">
+                    <div class="profile d-flex align-items-center ">
+                        <!-- <img src="restaurant_images/1.jpg" width="30px"> -->
+                        <h6 class="m-0 mb-3">Random User1</h6>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Mollitia veniam natus odio dolore temporibus. Officia consectetur expedita laboriosam quaerat
+                        neque.
+                    </p>
+                    <div class="rating">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide bg-white p-4">
+                    <div class="profile d-flex align-items-center ">
+                        <!-- <img src="restaurant_images/1.jpg" width="30px"> -->
+                        <h6 class="m-0 mb-3">Random User1</h6>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Mollitia veniam natus odio dolore temporibus. Officia consectetur expedita laboriosam quaerat
+                        neque.
+                    </p>
+                    <div class="rating">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="col-lg-l2 text-center mt-5">
+            <a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">Know more>>></a>
+
+        </div>
+
+    </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+
+    <!-- REACH US-->
+    <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Reach Us</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 p-4 mb-lg-0 mb-3 bg-white rounded">
+
+                <iframe class="w-100 rounded" height="320px"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113032.70910737834!2d85.17847586208751!3d27.70888202676265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb5137c1bf18db1ea!2sKathmandu%2044600!5e0!3m2!1sen!2snp!4v1711638706371!5m2!1sen!2snp"
+                    loading="lazy"></iframe>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <!-- call us -->
+                <div class="bg-white p-4 rounded mb-4">
+                    <h5>Call us</h5>
+                    <a href="tel: +977 1-4567890" class="d-inline-block mb-2 text-decoration-none text-dark">
+                        <i class="bi bi-telephone-fill"></i> +977 1-4567890
+                    </a>
+                    <br>
+                    <a href="tel: +977 1-4567890" class="d-inline-block text-decoration-none text-dark">
+                        <i class="bi bi-telephone-fill"></i> +977 1-4567891
+                    </a>
+                    <h5 class="mt-4">Email</h5>
+                    <a href="mailto: bristinaprajapati@gmail.com" class="d-inline-block text-decoration-none text-dark">
+                        <i class="bi bi-envelope-fill"></i> bristinaprajapati@gmail.com
+                    </a>
+
+                </div>
+
+                <!-- follow us -->
+                <div class="bg-white p-4 rounded mb-4">
+                    <h5>Follow us</h5>
+
+                    <a href="#" class="d-inline-block mb-3">
+                        <span class="badge bg-light text-dark fs-6 p-2">
+                            <i class="bi bi-facebook me-1"></i> Facebook
+                        </span>
+                    </a>
+                    <br>
+                    <a href="#" class="d-inline-block mb-3">
+                        <span class="badge bg-light text-dark fs-6 p-2">
+                            <i class="bi bi-instagram"></i> Instagram
+                        </span>
+                    </a>
+
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- footer -->
+    <?php require ('all/footer.php'); ?>
+
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -384,6 +394,39 @@
 
             }
 
+        });
+
+        var swiper = new Swiper(".swiper-testimonials", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            slidesPerView: "3",
+            loop: true,
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                },
+                640: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
         });
     </script>
 
